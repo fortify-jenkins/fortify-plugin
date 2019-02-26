@@ -17,10 +17,10 @@ For more information about Fortify SSC please visit https://www.microfocus.com/p
 
 To build the plugin and connect your IDE for a remote debug session, you can use the following script:
 ```
-SET MAVEN_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
-call mvn clean
-call mvn package -Dssc.url=http://127.0.0.1:8180/ssc/
-call mvn -Djetty.port=8181 -DskipTests=true hpi:run
+set MAVEN_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
+mvn clean
+mvn package -Dssc.url=http://127.0.0.1:8180/ssc/
+mvn -Djetty.port=8181 -DskipTests=true hpi:run
 ```
 
 ## Usage notes
